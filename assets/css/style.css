@@ -1,0 +1,42 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+.pageOne, .pageTwo {
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
+    height: 100%;
+    background-color: yellow;
+}
+.pageHeader {
+    padding-top: 2%;
+    font-size: 45px;
+    font-weight: bold;
+}
+.timerTextHeader {
+    margin-top: 2%;
+    font-size: 25px;
+    font-weight: bold;
+}
+.scoreText {
+    margin-top: 2%;
+    margin-bottom: -1%;
+    font-size: 20px;
+    font-weight: bold;
+}
+.radioBtn {
+    margin-top: 2%;
+    margin-left: 10px;
+    margin-right: 25px;
+}
+.question {
+    font-weight: bold;
+    font-size: 25px;
+}
+.questionBox {
+    margin-top: 4%;
+}
+.botBtn {
+    margin-bottom: 4%;
+}

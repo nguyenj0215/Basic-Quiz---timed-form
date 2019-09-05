@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="pageOne">
+        <p class="pageHeader">Sports Trivia Game!</p>
+        <p class="timerTextHeader">Time remaining: <span class="timerText">15</span> Seconds</p>
+        <div class="questionBox">
+            <p class="question">What team won the 2019 NBA champtionship?</p>
+            <div>
+                Golden State Warriors<input type="radio" class="radioBtn" name="q1Ans" value="gsw">
+                Los Angeles Lakers<input type="radio" class="radioBtn" name="q1Ans" value="lal">
+                Toronto Raptors<input type="radio" class="radioBtn" name="q1Ans" value="tor">
+                Boston Celtics<input type="radio" class="radioBtn" name="q1Ans" value="bos">
+            </div>
+        </div>
+        <div class="questionBox">
+            <p class="question">What team won the 2019 NFL superbowl?</p>
+            <div>
+                New England Patriots<input type="radio" class="radioBtn" name="q2Ans" value="ne">
+                Los Angeles Rams<input type="radio" class="radioBtn" name="q2Ans" value="lar">
+                Los Angeles Chargers<input type="radio" class="radioBtn" name="q2Ans" value="lac">
+                Green Bay Packers<input type="radio" class="radioBtn" name="q2Ans" value="gb">
+            </div>
+        </div>
+        <div class="questionBox">
+            <p class="question">Which is not an NBA or NFL franchise in LA?</p>
+            <div>
+                Chargers<input type="radio" class="radioBtn" name="q3Ans" value="lac">
+                Raiders<input type="radio" class="radioBtn" name="q3Ans" value="oak">
+                Lakers<input type="radio" class="radioBtn" name="q3Ans" value="lal">
+                Rams<input type="radio" class="radioBtn" name="q3Ans" value="lar">
+            </div>
+        </div>
+        <div class="questionBox">
+            <p class="question">Which is not an NBA or NFL franchise in Texas?</p>
+            <div>
+                Mavericks<input type="radio" class="radioBtn" name="q4Ans" value="dal">
+                Texans<input type="radio" class="radioBtn" name="q4Ans" value="hou">
+                Longhorns<input type="radio" class="radioBtn" name="q4Ans" value="tex">
+                Rockets<input type="radio" class="radioBtn botBtn" name="q4Ans" value="hour">
+            </div>
+        </div>
+       
+    </div>
+
+    <div class="pageTwo">
+        <p class="pageHeader">Sports Trivia Game!</p>
+        <p class="timerTextHeader">Time remaining: <span class="timerText">15</span> Seconds</p>
+        <p class="scoreText">You got: <span class="score"></span> out of 4!</p>
+        <div class="questionBox">
+            <p class="question">What team won the 2019 NBA champtionship?</p>
+            <div>
+                Golden State Warriors<input type="radio" class="radioBtn"value="gsw" disabled="disabled">
+                Los Angeles Lakers<input type="radio" class="radioBtn"value="lal" disabled="disabled">
+                Toronto Raptors<input type="radio" class="radioBtn" checked disabled="disabled">
+                Boston Celtics<input type="radio" class="radioBtn" disabled="disabled">
+            </div>
+        </div>
+        <div class="questionBox">
+            <p class="question">What team won the 2019 NFL superbowl?</p>
+            <div>
+                New England Patriots<input type="radio" class="radioBtn" checked disabled="disabled">
+                Los Angeles Rams<input type="radio" class="radioBtn" disabled="disabled">
+                Los Angeles Chargers<input type="radio" class="radioBtn" disabled="disabled">
+                Green Bay Packers<input type="radio" class="radioBtn" disabled="disabled">
+            </div>
+        </div>
+        <div class="questionBox">
+            <p class="question">Which is not an NBA or NFL franchise in LA?</p>
+            <div>
+                Chargers<input type="radio" class="radioBtn" disabled="disabled">
+                Raiders<input type="radio" class="radioBtn" checked disabled="disabled">
+                Lakers<input type="radio" class="radioBtn" disabled="disabled">
+                Rams<input type="radio" class="radioBtn" disabled="disabled">
+            </div>
+        </div>
+        <div class="questionBox">
+            <p class="question">Which is not an NBA or NFL franchise in Texas?</p>
+            <div>
+                Mavericks<input type="radio" class="radioBtn" disabled="disabled">
+                Texans<input type="radio" class="radioBtn" disabled="disabled">
+                Longhorns<input type="radio" class="radioBtn" checked disabled="disabled">
+                Rockets<input type="radio" class="radioBtn botBtn" disabled="disabled">
+            </div>
+        </div>
+       
+    </div>
+
+
+    <script src="assets/javascript/app.js"></script>
+
+</body>
+
+</html>
