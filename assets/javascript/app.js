@@ -2,12 +2,14 @@
 $(".pageTwo").hide()
 
 function pageOneTimer() {
+
     setTimeout(pageTwo, 25 * 1000)
 }
 pageOneTimer()
 
 // Make page one hidden and make page two visible----------------------------------
 function pageTwo() {
+
     $(".pageOne").hide()
     $(".pageTwo").show()
 }
@@ -18,16 +20,18 @@ var time = 25;
 var score = 0;
 
 function counterDown() {
+
     if (time > 0) {
         time--;
         $(".timerText").text(time)
-    } else {
+    }
+    else {
         $(".forPage1").hide()
         $(".forPage2").show()
 
         clearInterval(timerInt)
 
-        //Checking radio buttons for correct box checked-----------------------------------
+        //Checking radio buttons for correct box checked-------------------------------------
         if ($('input[name="q1Ans"]:checked').val() == "tor") {
             score++;
         }
@@ -47,9 +51,33 @@ function counterDown() {
 }
 
 function startTimer() {
+
     timerInt = setInterval(counterDown, 1000)
 }
 startTimer()
+
+//Submit button function -----------------------------------------------
+$(".submit").on("click", function submit() {
+    clearInterval(timerInt)
+    $(".pageOne").hide()
+    $(".pageTwo").show()
+
+    if ($('input[name="q1Ans"]:checked').val() == "tor") {
+        score++;
+    }
+    if ($('input[name="q2Ans"]:checked').val() == "ne") {
+        score++;
+    }
+    if ($('input[name="q3Ans"]:checked').val() == "oak") {
+        score++;
+    }
+    if ($('input[name="q4Ans"]:checked').val() == "tex") {
+        score++;
+    }
+
+    $(".score").text(score)
+})
+
 
 
 //Restart game function------------------------------------------------------------
@@ -66,47 +94,56 @@ $(".restart").on("click", function restart() {
     $(".timerText").text("25")
 
     function pageOneTimer() {
+
         setTimeout(pageTwo, 25 * 1000)
     }
     pageOneTimer()
 
     function startTimer() {
+
         timerInt = setInterval(counterDown, 1000)
     }
     startTimer()
 
     var timerInt;
-var time = 25;
-var score = 0;
+    var time = 25;
+    var score = 0;
 
-function counterDown() {
-    if (time > 0) {
-        time--;
-        $(".timerText").text(time)
-    } else {
-        $(".forPage1").hide()
-        $(".forPage2").show()
+    function counterDown() {
 
-        clearInterval(timerInt)
+        if (time > 0) {
 
-        if ($('input[name="q1Ans"]:checked').val() == "tor") {
-            score++;
-        }
-        if ($('input[name="q2Ans"]:checked').val() == "ne") {
-            score++;
-        }
-        if ($('input[name="q3Ans"]:checked').val() == "oak") {
-            score++;
-        }
-        if ($('input[name="q4Ans"]:checked').val() == "tex") {
-            score++;
+            time--;
+
+            $(".timerText").text(time)
         }
 
-        $(".score").text(score)
+        else {
 
+            $(".forPage1").hide()
+
+            $(".forPage2").show()
+
+            clearInterval(timerInt)
+
+            if ($('input[name="q1Ans"]:checked').val() == "tor") {
+                score++;
+            }
+            if ($('input[name="q2Ans"]:checked').val() == "ne") {
+                score++;
+            }
+            if ($('input[name="q3Ans"]:checked').val() == "oak") {
+                score++;
+            }
+            if ($('input[name="q4Ans"]:checked').val() == "tex") {
+                score++;
+            }
+
+            $(".score").text(score)
+
+        }
     }
-}
 
-$(".radioBtn").prop('checked', false);
+    $(".radioBtn").prop('checked', false);
 
 })
