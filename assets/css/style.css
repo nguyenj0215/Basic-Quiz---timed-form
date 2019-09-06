@@ -25,6 +25,9 @@ body, html {
     font-size: 20px;
     font-weight: bold;
 }
+.unanswered {
+    margin-left: 25px;
+}
 .radioBtn {
     margin-top: 2%;
     margin-left: 10px;
