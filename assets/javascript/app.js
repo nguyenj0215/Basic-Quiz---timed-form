@@ -29,8 +29,12 @@ $(document).ready(function () {
         if (time > 0) {
             time--;
             $(".timerText").text(time)
+            
         }
         else {
+
+            $(".forPage1").hide()
+            $(".forPage2").show()
 
             clearInterval(timerInt)
 
@@ -58,8 +62,7 @@ $(document).ready(function () {
             $(".score").text(correct)
 
         }
-        $(".forPage1").hide()
-        $(".forPage2").show()
+
     }
 
     function startTimer() {
@@ -118,7 +121,6 @@ $(document).ready(function () {
 
         correct = 0
         time = 25
-        count = 0
 
         $(".pageOne").show()
         $(".pageTwo").hide()
