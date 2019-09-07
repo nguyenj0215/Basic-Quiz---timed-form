@@ -23,7 +23,6 @@ $(document).ready(function () {
     var timerInt;
     var time = 25;
     var correct = 0;
-    var count = 0;
 
     function counterDown() {
 
@@ -32,8 +31,6 @@ $(document).ready(function () {
             $(".timerText").text(time)
         }
         else {
-            $(".forPage1").hide()
-            $(".forPage2").show()
 
             clearInterval(timerInt)
 
@@ -42,36 +39,27 @@ $(document).ready(function () {
                 correct++;
                 count++
             }
-            else if ($('input[name="q1Ans"]:checked').val() !== "tor") {
-                count++;
-            }
-            //need to check each questions to see if user left all boxes blank
+
             if ($('input[name="q2Ans"]:checked').val() == "ne") {
                 correct++;
                 count++
             }
-            else if ($('input[name="q2Ans"]:checked').val() !== "tor") {
-                count++;
-            }
+
             if ($('input[name="q3Ans"]:checked').val() == "oak") {
                 correct++;
                 count++
             }
-            else if ($('input[name="q3Ans"]:checked').val() !== "tor") {
-                count++;
-            }
+
             if ($('input[name="q4Ans"]:checked').val() == "tex") {
                 correct++;
                 count++
             }
-            else if ($('input[name="q4Ans"]:checked').val() !== "tor") {
-                count++
-            }
 
             $(".score").text(correct)
-            $(".unanswered").text(count)
 
         }
+        $(".forPage1").hide()
+        $(".forPage2").show()
     }
 
     function startTimer() {
@@ -94,34 +82,24 @@ $(document).ready(function () {
             correct++;
             count++
         }
-        else if ($('input[name="q1Ans"]:checked').val() !== "tor") {
-            count++;
-        }
-        //need to check each questions to see if user left all boxes blank
+
         if ($('input[name="q2Ans"]:checked').val() == "ne") {
             correct++;
             count++
         }
-        else if ($('input[name="q2Ans"]:checked').val() !== "tor") {
-            count++;
-        }
+
         if ($('input[name="q3Ans"]:checked').val() == "oak") {
             correct++;
             count++
         }
-        else if ($('input[name="q3Ans"]:checked').val() !== "tor") {
-            count++;
-        }
+
         if ($('input[name="q4Ans"]:checked').val() == "tex") {
             correct++;
             count++
         }
-        else if ($('input[name="q4Ans"]:checked').val() !== "tor") {
-            count++
-        }
 
         $(".score").text(correct)
-        $(".unanswered").text(count)
+
     })
 
 
@@ -140,6 +118,7 @@ $(document).ready(function () {
 
         correct = 0
         time = 25
+        count = 0
 
         $(".pageOne").show()
         $(".pageTwo").hide()
