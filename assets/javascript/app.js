@@ -41,22 +41,18 @@ $(document).ready(function () {
             //Checking radio buttons for correct box checked-------------------------------------
             if ($('input[name="q1Ans"]:checked').val() == "tor") {
                 correct++;
-                count++
             }
 
             if ($('input[name="q2Ans"]:checked').val() == "ne") {
                 correct++;
-                count++
             }
 
             if ($('input[name="q3Ans"]:checked').val() == "oak") {
                 correct++;
-                count++
             }
 
             if ($('input[name="q4Ans"]:checked').val() == "tex") {
                 correct++;
-                count++
             }
 
             $(".score").text(correct)
@@ -83,22 +79,18 @@ $(document).ready(function () {
 
         if ($('input[name="q1Ans"]:checked').val() == "tor") {
             correct++;
-            count++
         }
 
         if ($('input[name="q2Ans"]:checked').val() == "ne") {
             correct++;
-            count++
         }
 
         if ($('input[name="q3Ans"]:checked').val() == "oak") {
             correct++;
-            count++
         }
 
         if ($('input[name="q4Ans"]:checked').val() == "tex") {
             correct++;
-            count++
         }
 
         $(".score").text(correct)
